@@ -13,3 +13,6 @@ gemtags
 .gem.tags
 .gemtags
 .tags_sorted_by_file
+
+# IDE generated files and folders
+.idea
