@@ -71,8 +71,6 @@ build do
     "shared",
   ]
 
-  configure_args += ["--with-fipsdir=#{install_dir}/embedded", "fips"] if fips_mode?
-
   if windows?
     configure_args << "zlib-dynamic"
   else

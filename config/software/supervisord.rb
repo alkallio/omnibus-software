@@ -23,14 +23,13 @@ license_file "LICENSE"
 skip_transitive_dependency_licensing true
 
 dependency "python"
-dependency "pip"
 
 version("3.3.1") { source md5: "9b228d648320aff16f1e886f3685b569" }
 
 source url: "https://github.com/Supervisor/supervisor/archive/#{version}.tar.gz"
 
-relative_path "pip-#{version}"
+relative_path "supervisor-#{version}"
 
 build do
-    command "#{install_dir}/embedded/bin/python install --install-option=\"--install-scripts=#{install_dir}/bin\" #{name}==#{version}"
+    command "#{install_dir}/embedded/bin/python setup.py install"
 end
