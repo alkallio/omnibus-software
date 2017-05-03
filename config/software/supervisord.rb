@@ -32,5 +32,5 @@ source url: "https://github.com/Supervisor/supervisor/archive/#{version}.tar.gz"
 relative_path "pip-#{version}"
 
 build do
-    pip "install --install-option=\"--install-scripts=#{install_dir}/bin\" #{name}==#{version}"
+    command "#{install_dir}/embedded/bin/python install --install-option=\"--install-scripts=#{install_dir}/bin\" #{name}==#{version}"
 end

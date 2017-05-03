@@ -23,7 +23,6 @@ skip_transitive_dependency_licensing true
 dependency "zlib"
 dependency "cacerts"
 dependency "makedepend" unless aix? || windows?
-dependency "openssl-fips" if fips_mode?
 
 default_version "1.0.2k"
 
